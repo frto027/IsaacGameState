@@ -1,0 +1,885 @@
+//------------------------------------------------
+//--- 010 Editor v12.0.1 Binary Template
+//
+//      File: IsaacGameState
+//   Authors: Frto027
+//   Version: 144
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: ISAACNG_GSR0144
+//   History: 
+//------------------------------------------------
+#define VER 144
+
+struct S8B20A0 {
+  int32 L13;
+  if (L13 == -0x80000000) {
+    int32 L23;
+    uint16 L26, L30;
+  } else {
+    int32 L36, L39;
+  }
+};
+
+struct S8B93D0 {
+  int L485, L488, L495, L502, L509, L513, L520, L527, L534, L541, L547;
+  byte L554, L561;
+  if (VER < 0x82) {
+    int L571;
+  } else {
+    uint16 L579, L582;
+  }
+  if (VER < 0x79) {
+    byte L593;
+  } else {
+    byte L599;
+  }
+  if (VER < 0x4D) {
+    if (VER > 0x23) {
+      int L612;
+    }
+    if (VER >= 0x3A) {
+      int L620;
+    }
+  } else {
+    uint16 L629, L636, L643;
+  }
+
+  if (VER > 0x24) {
+    int L658;
+  }
+  if (VER >= 0x2D) {
+    int L671;
+  }
+
+  if (VER >= 0x3E) {
+    int L690, L699;
+  } else if (VER >= 0x3B) {
+    int L699;
+  }
+  int L707, L714, L721, L728, L735, L741, L748;
+  if (VER >= 0x28) {
+    int L758;
+  }
+
+  int L779, L786, L793, L800, L807, L813, L820;
+  if (VER >= 0x38) {
+    int L830;
+  }
+  struct SL853 {
+    int L858, L862, L869;
+    if (VER >= 0x64) {
+      int L879;
+    }
+    if (VER >= 0x6C) {
+      int L890;
+    }
+  };
+  if (VER >= 0x71) {
+    struct SL853 L853[4] < optimize = false > ;
+  } else if (VER >= 0x66) {
+    struct SL853 L853[3] < optimize = false > ;
+  } else if (VER >= 0x3C) {
+    struct SL853 L853[2] < optimize = false > ;
+  } else {
+    struct SL853 L853[1] < optimize = false > ;
+  }
+  int L903, L910, L917, L924;
+  if (VER >= 0x29) {
+    int L934, L941;
+  }
+
+  struct SL957 {
+    byte L961;
+    int L967;
+  };
+  if (VER >= 0x71) {
+    struct SL957 L957[4] < optimize = false > ;
+  } else if (VER >= 0x66) {
+    struct SL957 L957[3] < optimize = false > ;
+  } else {
+    struct SL957 L957[2] < optimize = false > ;
+  }
+
+  byte L979[0x3C] < optimize = false > ;
+
+  if (VER >= 0x4C) {
+    int L991;
+  }
+
+  struct S8BF750 {
+    int L21;
+    int L47[L21] < optimize = false > ;
+  };
+
+  if (VER >= 0x2F) {
+    struct S8BF750 L1000;
+  }
+  if (VER >= 0x27) {
+    struct S8BF750 L1017;
+  }
+
+  if (VER >= 0x8B) {
+    struct S8BF750 L1021;
+  }
+
+  int64 L1024;
+
+  if (VER >= 0x2F) {
+    int L1033;
+    byte L1067[L1033] < optimize = false > ;
+  }
+
+  int L1080;
+  struct {
+    int L1098, L1105;
+  }
+  L1088[L1080] < optimize = false > ;
+
+  if (VER >= 0x30) {
+    struct S8BF750 L1116, L1117, L1118, L1119;
+  }
+  if (VER >= 0x2F) {
+    struct S8BF750 L1123;
+  }
+
+  int L1127;
+  int L1132;
+  int L1142[5] < optimize = false > ;
+  int L1154;
+  if (VER < 0x4D) {
+    int L1164;
+  } else {
+    uint16 L1171, L1175;
+  }
+
+  int L1181, L1188, L1195;
+  if (VER >= 0x1F) {
+    int L1205s[3] < optimize = false > ;
+  }
+  if (VER >= 0x1E) {
+    int L1233;
+    struct {
+      int L1251s[6] < optimize = false > ;
+      if (VER >= 0x74) {
+        byte L1297;
+      }
+    }
+    L1246[L1233] < optimize = false > ;
+  }
+
+  if (VER >= 0x39) {
+    int L1312;
+    struct {
+      if (VER >= 0x67) {
+        struct S8B4540 BLALA;
+      } else {
+        /*TODO*/
+      }
+    }
+    L1328[L1312] < optimize = false > ;
+  }
+
+  int L1424s[9] < optimize = false > ;
+  if (VER < 0x8C) {
+    int L1490;
+  } else {
+    int L1497;
+  }
+  if (VER >= 0x23) {
+    int L1507;
+  }
+
+  if (VER >= 0x20) {
+    int familiar_count;
+
+    struct {
+      int L2648s[8] < optimize = false > ;
+      if (VER >= 0x55) {
+        int L2707, L2714;
+      }
+      if (VER >= 0x5A) {
+        int L2725;
+      }
+      if (VER >= 0x8F) {
+        int L2742;
+      }
+    }
+    L2643[familiar_count] < optimize = false > ;
+  }
+
+  //label 147
+
+  if (VER >= 0x40) {
+    byte co_player_count;
+    struct S8B8DE0 {
+      uint16 L8s[8] < optimize = false > ;
+      int L32, L35;
+    };
+    struct S8B8DE0 L1529[co_player_count] < optimize = false > ;
+    byte L1541;
+    if (L1541) {
+      struct S8B8DE0 L1544;
+    }
+
+    if (VER >= 0x41) {
+      uint16 L1558;
+      if (VER >= 0x58) {
+        int L1571;
+      }
+      if (VER >= 0x72) {
+        uint16 L1582, L1589;
+      }
+      if (VER >= 4) {
+        int L1605;
+      }
+      if (VER >= 0x50) {
+        int L1616, L1625;
+      }
+      if (VER >= 0x52) {
+        int L1638;
+      }
+      if (VER >= 0x5B) {
+        byte L1648[0xC] < optimize = false > ;
+        byte L1654[0xC] < optimize = false > ;
+        int L1663;
+      }
+      if (VER >= 0x5D) {
+        byte L1673, L1680;
+      }
+      if (VER != 0x5C) {
+
+        if (VER >= 0x63) {
+          byte L1694;
+        }
+        if (VER >= 0x5F) {
+          int L1704s[6] < optimize = false > ;
+        }
+        if (VER >= 96) {
+          int L1752;
+          uint16 costume_count; //L1755
+          struct {
+            int L1803, L1809, L1815, L1824;
+          }
+          L1794[costume_count] < optimize = false > ;
+
+          /*TODO*/
+
+        }
+        if (VER >= 0x61) {
+          int L1852;
+        }
+        if (VER >= 0x62) {
+          int L1862;
+        }
+        if (VER >= 0x64) {
+          uint16 L1877;
+          if (VER >= 0x6A) {
+            int L1887s[4] < optimize = false > ;
+          }
+          if (VER >= 0x6C) {
+            int L2340;
+            if (VER >= 0x90) {
+              byte L2344;
+              struct {
+                byte L2349;
+                int L2352;
+              }
+              L2345[L2344] < optimize = false > ;
+            }
+            byte L2509[8] < optimize = false > ;
+            int L2519;
+            byte L2533[6] < optimize = false > ;
+            byte L2540;
+            /* if L2540 > 20:L2540 = 20 */
+            byte L2554[L2540] < optimize = false > ;
+            byte L2564;
+            int L2571s[4] < optimize = false > ;
+          }
+          //LABEL 255
+          if (VER >= 0x75) {
+            int L1925;
+          }
+          if (VER >= 0x76) {
+            int L1938;
+          }
+          if (VER >= 0x78) {
+            int L1950;
+          }
+          if (VER >= 0x7E) {
+            struct {
+              uint16 L13s[3] < optimize = false > ;
+              byte L25;
+              uint16 L31s[4] < optimize = false > ;
+            }
+            S8B90C0;
+          }
+          if (VER >= 0x80) {
+            struct SL1967 {
+              byte L1971;
+              int L1977;
+            };
+            if (VER >= 0x71) {
+              struct SL1967 L1967[4] < optimize = false > ;
+            } else if (VER >= 0x66) {
+              struct SL1967 L1967[3] < optimize = false > ;
+            } else {
+              struct SL1967 L1967[2] < optimize = false > ;
+            }
+
+            int64 L1989;
+
+          }
+
+          if (VER >= 0x82) {
+            byte L2007;
+            struct SL2011 {
+              byte L2015;
+              int L2021;
+            };
+            if (VER >= 0x71) {
+              struct SL2011 L2011[4] < optimize = false > ;
+            } else if (VER >= 0x66) {
+              struct SL2011 L2011[3] < optimize = false > ;
+            } else {
+              struct SL2011 L2011[2] < optimize = false > ;
+            }
+            int64 L2033;
+          }
+
+          if (VER >= 0x81) {
+            int L2044;
+          }
+          if (VER >= 0x82) {
+            int L2055;
+          }
+          if (VER >= 0x83) {
+            int L2072;
+          }
+          if (VER >= 0x6E) {
+            byte L2079;
+            int L2094[L2079] < optimize = false > ;
+          }
+          if (VER >= 0x6F) {
+            int L2114;
+          }
+          if (VER >= 0x73) {
+            int L2127;
+          }
+          if (VER >= 0x7F) {
+            byte L2138;
+            if (L2138 & 0xFF != 0xFF) {
+              int L2151, L2160;
+            }
+          }
+          if (VER >= 0x43) {
+            int history_count; //L2166
+            struct {
+              int L2184s[6] < optimize = false > ;
+            }
+            history[history_count] < optimize = false > ;
+          }
+          if (VER >= 0x65) {
+            byte L2250;
+            uint16 L2258[L2250];
+          }
+          if (VER >= 0x51) {
+            byte L2271;
+            int L2290[L2271] < optimize = false > ;
+          }
+          if (VER >= 0x8A) {
+            int L2312;
+            struct {
+              uint16 L2321, L2324;
+
+            }
+            L2317[L2312] < optimize = false > ;
+          }
+
+        } else {
+          /* i dont do it */
+        }
+      }
+    }
+  }
+
+};
+
+struct SRoomData {
+  struct S8B20A0 L81;
+  if (VER < 125) {
+    int32 L88, L91, L95;
+  } else {
+    uint16 L103, L108, L112;
+    byte L116;
+  }
+  int32 L122;
+  int32 L130[8] < optimize = false > ;
+  int32 L136, L142;
+  if (VER < 63) {
+    byte L152;
+    int L158;
+    byte L161;
+    byte L167;
+    byte L172;
+    byte L177;
+    if (VER >= 61) {
+      int L185;
+    }
+    byte L189;
+  } else {
+    int L197;
+    if (VER < 130) {
+      int L205;
+    } else {
+      uint16 L213, L216;
+    }
+    int L221;
+  }
+  int L226, L230, L234, L238;
+  if (VER >= 75) {
+    int L259;
+  }
+
+  struct {
+    if (VER >= 123) {
+      uint16 L275;
+      if (L275 != 0) {
+        int L284;
+
+        int L288;
+        uint16 L291;
+        int L297;
+        int L303;
+        int L308;
+      }
+    } else {
+      int L313, L317, L319, L321, L323, L325, L327, L329, L331;
+      byte L333, L335, L337;
+      int L339;
+      if (VER >= 0x21) {
+        int L306;
+        int L308;
+      }
+    }
+  }
+  L264[448] < optimize = false > ;
+  int L351;
+  struct S8B4540 {
+
+    int L46s[6] < optimize = false > ;
+    if (VER >= 59) {
+      byte L72;
+    }
+    int L77;
+    if (VER >= 0x47) {
+      int L83;
+    }
+    byte L89;
+    if (VER >= 0x88) {
+      int L95;
+    }
+    int L100, L104;
+    if (VER < 0x5B) {
+      byte L111;
+    } else {
+      int L118;
+    }
+    int L123, L127;
+    if (VER >= 0x47) {
+      /*nothing*/
+    } else {
+      byte L137[8] < optimize = false > ;
+    }
+    int L151, L155;
+    byte L159;
+    int L163, L167;
+    if (VER >= 0x46) {
+      uint16 L174;
+    }
+    if (VER >= 0x6C) {
+      int L182;
+    }
+    if (VER >= 0x67) {
+      byte L189;
+      if (L189 & 1) {
+        byte L198[0x20] < optimize = false > ;
+      }
+      if (L189 & 2) {
+        struct S8B4540 inner;
+      }
+
+    }
+
+  };
+  struct S8B4540 L351_NEXT[L351] < optimize = false > ;
+
+  int L373;
+  int L390[L373] < optimize = false > ;
+  int L400;
+  struct S8B4540 inner[L400] < optimize = false > ;
+  if (VER < 0x49) {
+
+    int L424, L428;
+    int L436[8] < optimize = false > ;
+  } else {
+    uint16 L447, L450;
+    byte L453[16] < optimize = false > ;
+    if (VER > 0x55) {
+      uint64 L458;
+    }
+    int L463;
+    if (VER >= 0x68) {
+      uint16 L469;
+    }
+  }
+
+};
+char magic[16] < optimize = false > ;
+int32 L217;
+if (VER >= 51) {
+  byte L219;
+}
+byte L220;
+byte L223;
+int32 L224;
+uint16 L225;
+/* if L225 > 49 L225 = 49 */
+byte L233[L225] < optimize = false > ;
+int32 L234, L235;
+if (VER >= 87) {
+  int32 L237;
+}
+int32 L238s[3] < optimize = false > ;
+if (VER >= 64) {
+  int32 L242;
+}
+int L243s[5] < optimize = false > ;
+if (VER >= 52) {
+  int32 game_update_tick;
+}
+if (VER < 67) {
+  int32 L254;
+}
+if (VER >= 67 || L254 == 0) {
+  int32 L267;
+  if (VER >= 43) {
+    int L271;
+  }
+  if (VER >= 46) {
+    int L275;
+  }
+  byte L278;
+  int32 L281;
+  struct {
+    int32 N1[6] < optimize = false > ;
+    struct {
+      int32 N1, N2;
+    }
+    L282_INNER[30] < optimize = false > ;
+    int32 N2, N3;
+  }
+  L282;
+  int32 L285s[7] < optimize = false > ;
+  if (VER >= 33) {
+    int32 L305;
+  }
+  byte L308, L311, L314, L317;
+  uint16 L318; /* if L318 > 24:L318 = 24 */
+  byte L329[L318] < optimize = false > ;
+  int32 L336;
+  byte L338[48] < optimize = false > ;
+  int L341, L344, L347;
+
+  if (VER > 80) {
+    int32 L358[14] < optimize = false > ;
+  } else {
+    int32 L358[13] < optimize = false > ;
+  }
+
+  if (VER >= 86) {
+    int32 L368;
+    struct S8B20A0 NEXT_L368[L368] < optimize = false > ; /* needs check */
+  }
+  int32 room_count /*L439*/; /* if L439 >= 507:invalid room count */
+  struct SRoomData room_data[room_count] < optimize = false > ;
+  struct SRoomData extra_room_data[525 - 507] < optimize = false > ;
+  if (VER < 0x7B) {
+    /* TODO */
+    byte L500[0x2A4] < optimize = false > ;
+  } else {
+    uint16 L1087;
+    uint16 L1094[L1087] < optimize = false > ;
+  }
+  //LABEL_81
+  int L504;
+  if (VER >= 0x7B) {
+    byte L511;
+  }
+  if (VER >= 0x7C) {
+    byte L519;
+  }
+  int L523s[4] < optimize = false > ;
+  if (VER >= 0x86) {
+    int L537, L540, L543;
+    byte L546, L549;
+  }
+  int L553;
+  if (VER >= 0x47) {
+    int L559s[4] < optimize = false > ;
+  }
+  if (VER >= 0x87) {
+    byte L575, L578;
+  }
+  if (VER >= 0x48) {
+    int L585;
+  }
+  int L589;
+  if (VER >= 0x33) {
+    byte L595;
+  }
+
+  if (VER >= 0x44) {
+    byte player_count;
+    struct S8B93D0 player_info[player_count] < optimize = false > ;
+  } else {
+    struct S8B93D0 L623; /* to be checked */
+  }
+
+  if (VER >= 0x8D) {
+    byte L622;
+
+    struct {
+      byte L639;
+      if (L639) {
+        struct S8B93D0 L679;
+      }
+    }
+    L628[L622] < optimize = false > ;
+  }
+
+  struct {
+    /*TODO*/
+
+    struct S8B76A0_inner {
+      int L82;
+      int L109[L82] < optimize = false > ;
+    };
+    if (VER >= 0x7A) {
+      struct S8B76A0_inner L78[31] < optimize = false > ;
+      int L122[31] < optimize = false > ;
+    } else
+    if (VER >= 0x70) {
+      struct S8B76A0_inner L78[29] < optimize = false > ;
+      int L122[29] < optimize = false > ;
+    } else
+    if (VER >= 0x69) {
+      struct S8B76A0_inner L78[28] < optimize = false > ;
+      int L122[28] < optimize = false > ;
+    } else
+    if (VER >= 0x57) {
+      struct S8B76A0_inner L78[27] < optimize = false > ;
+      int L122[27] < optimize = false > ;
+    } else {
+      struct S8B76A0_inner L78[26] < optimize = false > ;
+      int L122[26] < optimize = false > ;
+    }
+    int L126, L130, L134, L138, L142;
+    if (VER >= 0x4A) {
+      int L149;
+    }
+    if (VER >= 0x37) {
+      int L160;
+      byte L187[L160] < optimize = false > ;
+    } else {
+      /* 0x35 is 511/733 */
+      if (VER >= 0x35) {
+        byte L187[733] < optimize = false > ;
+      } else {
+        byte L187[511] < optimize = false > ;
+      }
+    }
+
+    if (VER >= 0x37) {
+      int L208;
+      byte L242[L208] < optimize = false > ;
+    } else {
+      if (VER >= 0x35) {
+        byte L242[190] < optimize = false > ;
+      } else {
+        byte L242[120] < optimize = false > ;
+      }
+    }
+
+    if (VER < 0x37) {
+      int L258;
+    }
+
+    if (VER >= 0x77) {
+      int L264[15] < optimize = false > ;
+      byte L269[15] < optimize = false > ;
+    } else {
+      int L264[14] < optimize = false > ;
+      byte L269[14] < optimize = false > ;
+    }
+
+    if (VER >= 0x4E) {
+      if (VER >= 0x7A) {
+        uint16 L276[31] < optimize = false > ;
+      } else
+      if (VER >= 0x70) {
+        uint16 L276[29] < optimize = false > ;
+      } else
+      if (VER >= 0x69) {
+        uint16 L276[28] < optimize = false > ;
+      } else
+      if (VER >= 0x57) {
+        uint16 L276[27] < optimize = false > ;
+      } else {
+        uint16 L276[26] < optimize = false > ;
+      }
+    }
+
+  }
+  S8B76A0; /* L689 */
+  byte game_seed_str[9];
+  if (VER < 0x54) {
+    byte seed_effect[0x4D]; //L712
+  } else {
+    byte seed_effect_count;
+    byte seed_effect[seed_effect_count];
+  }
+  int L783, L786, L789;
+  if (VER >= 0x2F) {
+    int L989;
+    struct {
+      int L1037;
+      if (VER >= 0x30) {
+        int L1048;
+      }
+    }
+    L1031[L989];
+  }
+  if (VER >= 0x42) {
+    uint16 L802;
+    byte L802_inner[L802 / 8];
+    uint16 L805;
+    int L814[L805];
+  }
+
+  if (VER >= 0x50) {
+    int L832;
+  }
+  if (VER >= 0x59) {
+    byte L842;
+    struct {
+      int L859, L864, L869;
+    }
+    L853[L842];
+  }
+  if (VER >= 0x53) {
+    uint16 L885, L889;
+  }
+  if (VER >= 0x81) {
+    byte L898;
+    struct {
+      byte L906;
+      if (VER >= 0x89) {
+        byte L913;
+        struct S8B4A00 {
+
+          struct S8B20A0 L81;
+          if (VER < 0x7D) {
+            int L88s[3];
+          } else {
+            uint16 L103s[3];
+            byte L116;
+          }
+          int L122;
+          byte L130[0x20];
+
+          int L136, L142;
+
+          if (VER < 0x3F) {
+            byte L152;
+            int L158;
+            byte L161, L167, L171, L177;
+            if (VER >= 0x3D) {
+              int L185;
+            }
+
+            byte L189;
+
+          } else {
+            int L197;
+            if (VER < 0x82) {
+              int L205;
+            } else {
+              uint16 L213;
+              uint16 L216;
+            }
+            int L221;
+          }
+          int L226s[4];
+          if (VER >= 0x4B) {
+            int L259;
+          }
+          struct {
+            if (VER >= 0x7B) {
+              uint16 L275;
+              if (L275) {
+                int L284, L288;
+                uint16 L291;
+                int L297, L303, L308;
+              }
+
+            } else {
+              int L313, L319, L323, L327, L331;
+              byte L335;
+              int L339;
+              if (VER >= 0x21) {
+                int L308;
+              }
+            }
+          }
+          L264[0x3800 / 32]<optimize=false>;
+
+          int L351;
+          struct S8B4540 L361[L351];
+          int L373;
+          int L390[L373];
+          int L400;
+          struct S8B4540 L411[L400];
+          if (VER < 0x49) {
+            int L424, L428;
+            int L436[8];
+          } else {
+            uint16 L447, L450;
+            byte L453[0x10];
+            if (VER >= 0x55) {
+              int64 L458;
+            }
+            int L463;
+            if (VER >= 0x68) {
+              uint16 L469;
+            }
+          }
+        };
+        struct S8B4A00 L923[L913] < optimize = false > ;
+        byte L932;
+        struct S8B4A00 L942[L932] < optimize = false > ;
+        byte L952;
+      }
+    }
+    L903[7] < optimize = false > ;
+  }
+  if (VER >= 0x85) {
+    uint16 L964;
+  }
+  if (VER >= 0x8A) {
+    int INNER_L21;
+    int INNER_L47[INNER_L21];
+  }
+  int L975;
+}
