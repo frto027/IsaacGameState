@@ -17,4 +17,3 @@ let x = new sd.IsaacGameState(dv,(cursor)=>{
     }
 })
 
-fs.writeFileSync('out.json',JSON.stringify(x))

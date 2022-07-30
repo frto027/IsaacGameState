@@ -286,7 +286,7 @@ function parseTemplate() {
                     break
                 }
             }
-        } else if (w == 'byte' || w == 'char') {
+        } else if (w == 'byte' || w == 'char' || w == 'ubyte') {
             readAssert(w);
             while (true) {
                 let varname = readKeyword()

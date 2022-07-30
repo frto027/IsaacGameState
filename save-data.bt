@@ -368,8 +368,8 @@ struct S8B93D0 {
             int L2127;
           }
           if (VER >= 0x7F) {
-            byte L2138;
-            if (L2138 & 0xFF != 0xFF) {
+            ubyte L2138;
+            if (L2138 != 0xFF) {
               int L2151, L2160;
             }
           }
@@ -465,7 +465,7 @@ struct SRoomData {
     }
   }
   L264[448] < optimize = false > ;
-  int L351;
+  int entityCount;
   struct S8B4540 {
 
     int L46s[6] < optimize = false > ;
@@ -513,7 +513,7 @@ struct SRoomData {
     }
 
   };
-  struct S8B4540 L351_NEXT[L351] < optimize = false > ;
+  struct S8B4540 roomEntityList[entityCount] < optimize = false > ;
 
   int L373;
   int L390[L373] < optimize = false > ;

@@ -549,7 +549,7 @@ this.L2127 = read_uint32()
 }
 if(VER >= 0x7F ){
 this.L2138 = read_byte()
-if(this.L2138 & 0xFF != 0xFF ){
+if(this.L2138 != 0xFF ){
 this.L2151 = read_uint32()
 this.L2160 = read_uint32()
 }
@@ -752,10 +752,10 @@ this.L308 = read_uint32()
 
 })()
 }
-this.L351 = read_uint32()
-this.L351_NEXT = []
-for(let i=0;i<this.L351 ;i++){
-this.L351_NEXT[i]= new S8B4540()
+this.entityCount = read_uint32()
+this.roomEntityList = []
+for(let i=0;i<this.entityCount ;i++){
+this.roomEntityList[i]= new S8B4540()
 }
 this.L373 = read_uint32()
 this.L390 = []
