@@ -480,7 +480,7 @@ struct SRoomData {
     if (VER >= 0x88) {
       int L95;
     }
-    int L100, L104;
+    float L100, L104;
     if (VER < 0x5B) {
       byte L111;
     } else {
@@ -662,36 +662,36 @@ if (VER >= 67 || L254 == 0) {
   struct {
     /*TODO*/
 
-    struct S8B76A0_inner {
-      int L82;
-      int L109[L82] < optimize = false > ;
+    struct item_pool_status {
+      int item_count;
+      float weight[item_count] < optimize = false > ;
     };
     if (VER >= 0x7A) {
-      struct S8B76A0_inner L78[31] < optimize = false > ;
-      int L122[31] < optimize = false > ;
+      struct item_pool_status L78[31] < optimize = false > ;
+      int BibleUpgrade[31] < optimize = false > ;
     } else
     if (VER >= 0x70) {
-      struct S8B76A0_inner L78[29] < optimize = false > ;
-      int L122[29] < optimize = false > ;
+      struct item_pool_status L78[29] < optimize = false > ;
+      int BibleUpgrade[29] < optimize = false > ;
     } else
     if (VER >= 0x69) {
-      struct S8B76A0_inner L78[28] < optimize = false > ;
-      int L122[28] < optimize = false > ;
+      struct item_pool_status L78[28] < optimize = false > ;
+      int BibleUpgrade[28] < optimize = false > ;
     } else
     if (VER >= 0x57) {
-      struct S8B76A0_inner L78[27] < optimize = false > ;
-      int L122[27] < optimize = false > ;
+      struct item_pool_status L78[27] < optimize = false > ;
+      int BibleUpgrade[27] < optimize = false > ;
     } else {
-      struct S8B76A0_inner L78[26] < optimize = false > ;
-      int L122[26] < optimize = false > ;
+      struct item_pool_status L78[26] < optimize = false > ;
+      int BibleUpgrade[26] < optimize = false > ;
     }
     int L126, L130, L134, L138, L142;
     if (VER >= 0x4A) {
       int L149;
     }
     if (VER >= 0x37) {
-      int L160;
-      byte L187[L160] < optimize = false > ;
+      int item_ban_list_count;
+      byte item_ban_list[item_ban_list_count] < optimize = false > ; //item_pool_ban_list
     } else {
       /* 0x35 is 511/733 */
       if (VER >= 0x35) {
@@ -702,13 +702,13 @@ if (VER >= 67 || L254 == 0) {
     }
 
     if (VER >= 0x37) {
-      int L208;
-      byte L242[L208] < optimize = false > ;
+      int trinket_count;
+      byte trinket_list[trinket_count] < optimize = false > ; //L242
     } else {
       if (VER >= 0x35) {
-        byte L242[190] < optimize = false > ;
+        byte trinket_list[190] < optimize = false > ; //L242
       } else {
-        byte L242[120] < optimize = false > ;
+        byte trinket_list[120] < optimize = false > ; //L242
       }
     }
 
@@ -742,7 +742,7 @@ if (VER >= 67 || L254 == 0) {
     }
 
   }
-  S8B76A0; /* L689 */
+  ItemPool;//S8B76A0 /* L689 */
   byte game_seed_str[9];
   if (VER < 0x54) {
     byte seed_effect[0x4D]; //L712
