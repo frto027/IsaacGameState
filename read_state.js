@@ -8,7 +8,6 @@ for(let i=0;i<f.length;i++){
 const sd = require('./save-data')
 
 console.log(sd.IsaacGameState)
-
 let x = new sd.IsaacGameState(dv,(cursor)=>{
     if(f.length == cursor){
         console.log("check passed")
@@ -16,4 +15,4 @@ let x = new sd.IsaacGameState(dv,(cursor)=>{
         console.log(cursor, f.length)
     }
 })
-
+fs.writeFileSync('out.json',JSON.stringify(x))

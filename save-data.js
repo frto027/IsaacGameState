@@ -15,7 +15,11 @@ function IsaacGameState(dv,checker){
         cursor += 1
         return r
     }
-
+    function read_float(){
+        let r = dv.getFloat32(cursor,true)
+        cursor += 4
+        return r
+    }
     function read_uint64(){
         /* 小心精度损失 */
         let r = dv.getUint32(cursor,true) + dv.getUint32(cursor+4,true) * 0x100000000
@@ -617,8 +621,8 @@ this.L89 = read_byte()
 if(VER >= 0x88 ){
 this.L95 = read_uint32()
 }
-this.L100 = read_uint32()
-this.L104 = read_uint32()
+this.L100 = read_float()
+this.L104 = read_float()
 if(VER < 0x5B ){
 this.L111 = read_byte()
 }
@@ -793,11 +797,11 @@ this.L469 = read_uint16()
 }
 
 }
-function S8B76A0_inner(){
-this.L82 = read_uint32()
-this.L109 = []
-for(let i=0;i<this.L82 ;i++){
-this.L109[i]= read_uint32();
+function item_pool_status(){
+this.item_count = read_uint32()
+this.weight = []
+for(let i=0;i<this.item_count ;i++){
+this.weight[i]= read_float();
 }
 
 }
@@ -1121,55 +1125,55 @@ this.L679 = new S8B93D0()
 })()
 }
 }
-this.S8B76A0 = new (function(){
+this.ItemPool = new (function(){
 if(VER >= 0x7A ){
 this.L78 = []
 for(let i=0;i<31 ;i++){
-this.L78[i]= new S8B76A0_inner()
+this.L78[i]= new item_pool_status()
 }
-this.L122 = []
+this.BibleUpgrade = []
 for(let i=0;i<31 ;i++){
-this.L122[i]= read_uint32();
+this.BibleUpgrade[i]= read_uint32();
 }
 }
 else if(VER >= 0x70 ){
 this.L78 = []
 for(let i=0;i<29 ;i++){
-this.L78[i]= new S8B76A0_inner()
+this.L78[i]= new item_pool_status()
 }
-this.L122 = []
+this.BibleUpgrade = []
 for(let i=0;i<29 ;i++){
-this.L122[i]= read_uint32();
+this.BibleUpgrade[i]= read_uint32();
 }
 }
 else if(VER >= 0x69 ){
 this.L78 = []
 for(let i=0;i<28 ;i++){
-this.L78[i]= new S8B76A0_inner()
+this.L78[i]= new item_pool_status()
 }
-this.L122 = []
+this.BibleUpgrade = []
 for(let i=0;i<28 ;i++){
-this.L122[i]= read_uint32();
+this.BibleUpgrade[i]= read_uint32();
 }
 }
 else if(VER >= 0x57 ){
 this.L78 = []
 for(let i=0;i<27 ;i++){
-this.L78[i]= new S8B76A0_inner()
+this.L78[i]= new item_pool_status()
 }
-this.L122 = []
+this.BibleUpgrade = []
 for(let i=0;i<27 ;i++){
-this.L122[i]= read_uint32();
+this.BibleUpgrade[i]= read_uint32();
 }
 }
 else {
 this.L78 = []
 for(let i=0;i<26 ;i++){
-this.L78[i]= new S8B76A0_inner()
+this.L78[i]= new item_pool_status()
 }
-this.L122 = []
+this.BibleUpgrade = []
 for(let i=0;i<26 ;i++){
-this.L122[i]= read_uint32();
+this.BibleUpgrade[i]= read_uint32();
 }
 
 }
@@ -1182,10 +1186,10 @@ if(VER >= 0x4A ){
 this.L149 = read_uint32()
 }
 if(VER >= 0x37 ){
-this.L160 = read_uint32()
-this.L187 = []
-for(let i=0;i<this.L160 ;i++){
-this.L187[i]= read_byte();
+this.item_ban_list_count = read_uint32()
+this.item_ban_list = []
+for(let i=0;i<this.item_ban_list_count ;i++){
+this.item_ban_list[i]= read_byte();
 }
 }
 else {
@@ -1205,23 +1209,23 @@ this.L187[i]= read_byte();
 
 }
 if(VER >= 0x37 ){
-this.L208 = read_uint32()
-this.L242 = []
-for(let i=0;i<this.L208 ;i++){
-this.L242[i]= read_byte();
+this.trinket_count = read_uint32()
+this.trinket_list = []
+for(let i=0;i<this.trinket_count ;i++){
+this.trinket_list[i]= read_byte();
 }
 }
 else {
 if(VER >= 0x35 ){
-this.L242 = []
+this.trinket_list = []
 for(let i=0;i<190 ;i++){
-this.L242[i]= read_byte();
+this.trinket_list[i]= read_byte();
 }
 }
 else {
-this.L242 = []
+this.trinket_list = []
 for(let i=0;i<120 ;i++){
-this.L242[i]= read_byte();
+this.trinket_list[i]= read_byte();
 }
 
 }

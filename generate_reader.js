@@ -262,6 +262,30 @@ function parseTemplate() {
                     break
                 }
             }
+        } else if (w == 'float') {
+            readAssert(w);
+            while (true) {
+                let varname = readKeyword()
+                if (peekKeyword() == '[') {
+                    readAssert('[');
+                    let count = readExpr()
+                    readAssert(']')
+
+                    GEN += `this.${varname} = []\n`
+                    GEN += `for(let i=0;i<${count};i++){\n`;
+                    GEN += `this.${varname}[i]= read_float();\n`
+                    GEN += "}\n"
+                } else {
+                    GEN += `this.${varname} = read_float()\n`
+                }
+                if (peekKeyword() == ',') {
+                    readAssert(',')
+                } else {
+                    skipOpt();
+                    readAssert(';')
+                    break
+                }
+            }
         } else if (w == 'uint16' || w == 'int16') {
             readAssert(w);
             while (true) {
@@ -367,7 +391,11 @@ fs.writeFileSync('save-data.js',
         cursor += 1
         return r
     }
-
+    function read_float(){
+        let r = dv.getFloat32(cursor,true)
+        cursor += 4
+        return r
+    }
     function read_uint64(){
         /* 小心精度损失 */
         let r = dv.getUint32(cursor,true) + dv.getUint32(cursor+4,true) * 0x100000000
